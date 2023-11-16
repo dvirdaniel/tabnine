@@ -1,11 +1,11 @@
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
-import redis from 'redis';
+import * as redis from 'redis';
 
 const app = express();
 const port = 3000;
 
-const redisClient = redis?.createClient();
+const redisClient = redis.createClient();
 
 // Default timeout - 10 seconds
 const DEFAULT_TIMEOUT = 10000;
