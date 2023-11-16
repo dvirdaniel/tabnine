@@ -29,16 +29,15 @@ app.post('/api/:queue_name', (req: Request, res: Response) => {
 
     res.status(201).send('Message added to the queue');
 
-/*
+    /*
     // Push the message to Redis list
-    redisClient?.rPush(queue_name, message, (err, reply) => {
+    redisClient.rPush(queue_name, message, (err: any, reply: any) => {
         if (err) {
             return res.status(500).send('Error adding message to the queue');
         }
 
         res.status(201).send('Message added to the queue');
-    });
-    */
+    });*/
 });
 
 // GET endpoint to get the next message from the queue
